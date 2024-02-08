@@ -1,17 +1,3 @@
-// Deposit money
-
-// Determine number of lines to bet on
-
-// Collect Bet Amount
-
-// Spin Slot machine 
-
-// Check if user won 
-
-// Give user Winnings
-
-// Play agin
-
 const prompt = require("prompt-sync")();
 
 const ROWS = 3;
@@ -31,7 +17,7 @@ const SYMBOLS_VALUES = {
   D: 2
 }
 
-
+// deposit function
 const deposit = () => {
   while (true) {
     const depositAmount = prompt("Enter a deposit amount: ");
@@ -45,6 +31,7 @@ const deposit = () => {
   }
 };
 
+// get number of lines to bet on 
 const getNumberOfLines = () => {
   while (true) {
     const Lines = prompt("Enter number of lines to bet on (1-3): ");
@@ -58,6 +45,7 @@ const getNumberOfLines = () => {
   }
 };
 
+// get bet amount from the user
 const getBet = (balance, lines) => {
   while (true) {
     const bet = prompt("Enter the total bet per line: ");
@@ -71,6 +59,8 @@ const getBet = (balance, lines) => {
   }
 };
 
+
+// spin function
 const spin = () => {
   const symbols = [];
   for (const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
@@ -94,6 +84,7 @@ const spin = () => {
     return reels;
 };
 
+// transpose the array 
 const transpose = (reels) => {
   const rows = [];
 
@@ -106,6 +97,7 @@ const transpose = (reels) => {
   return rows;
 };
 
+// printing rows 
 const printRows = (rows) => {
   for (const row of rows) {
     let rowString = "";
@@ -119,6 +111,7 @@ const printRows = (rows) => {
   }
 };
 
+// get winnings function
 const getWinnings = (rows, bet, lines) => {
   let winnings = 0;
 
@@ -141,6 +134,7 @@ const getWinnings = (rows, bet, lines) => {
   return winnings;
 };
 
+// the game
 const game = () => {
   let balance = deposit();
 
