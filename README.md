@@ -1,4 +1,4 @@
-# SlotMachine project written in JavaScript 
+# SlotMachine project written in JavaScript using NodeJS
 
 Date of project: 08/02/24
 
