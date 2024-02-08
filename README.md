@@ -1,5 +1,17 @@
 # SlotMachine project written in JavaScript 
 
-Date started: 08/02/24
+Date of project: 08/02/24
 
-`
+# skills used in this project 
+
+* functions 
+* constants 
+* global variables 
+* Arrays 
+* transposing an array
+* Error Handling:
+* Looping 
+* radnomization 
+* conditional statements 
+* objects 
+* string manipulation
